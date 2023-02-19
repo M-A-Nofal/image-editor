@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+body {
+    background-color: #333;
+    height: 100vh;
+}
+h2 {
+    color: #009688;
+    margin: 15px auto;
+    text-align: center;
+    font-size: 30px;
+    padding: 5px;
+
+}
+.container {
+    background-color: #222;
+    width: 80vh;
+    margin: 10px auto;
+    border-radius: 10px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+}
+/* start imegs slid */
+.img {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.img .img-box img,
+.img .img-box canvas {
+    max-width: 45vh;
+    max-height: 60vh;
+}
+.img .upload input {
+    display: none;
+}
+.img .upload label {
+    color: #fff;
+    padding: 8px 20px;
+    border: 2px #fff dashed;
+    cursor: pointer;
+}
+/* end imegs slid */
+/* start filters slid */
+.filters ul,
+.filters ul li {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    direction: rtl;
+}
+.filters ul li label {
+    color: #fff;
+}
+.filters ul li:last-child {
+    flex-direction: row;
+    justify-content: space-around;
+}
+.filters ul li a,
+.filters ul li .reset {
+    color: #fff;
+    padding: 10px 20px;
+    background-color: #009688;
+    cursor: pointer;
+}
+.filters ul li a:hover,
+.filters ul li .reset:hover {
+    background-color: #0096889e;
+}
+@media screen and (max-width:650px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    .img img, canvas {
+        max-width: 80vh;
+    }
+}
+
+/* end filters slid */
+
